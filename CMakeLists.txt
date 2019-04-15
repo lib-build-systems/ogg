@@ -83,7 +83,7 @@ endif()
 add_library(ogg ${OGG_HEADERS} ${OGG_SOURCES})
 target_include_directories(ogg  PRIVATE
                                     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-                                    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+                                    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
                                 PUBLIC
                                     $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
