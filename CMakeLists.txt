@@ -85,7 +85,7 @@ target_include_directories(ogg  PRIVATE
                                     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
                                     $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
                                 PUBLIC
-                                    $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
+                                    $<INSTALL_INTERFACE:include/ogg>)
 
 get_version_info(OGG_VERSION_INFO "LIB_CURRENT" "LIB_AGE" "LIB_REVISION")
 set_target_properties(
