@@ -94,7 +94,7 @@ set_target_properties(
     PUBLIC_HEADER "${OGG_HEADERS}"
 )
 
-if(BUILD_FRAMEWORK)
+if (BUILD_FRAMEWORK)
     set_target_properties(ogg PROPERTIES
         FRAMEWORK TRUE
         FRAMEWORK_VERSION ${PROJECT_VERSION}
@@ -104,12 +104,12 @@ if(BUILD_FRAMEWORK)
         XCODE_ATTRIBUTE_INSTALL_PATH "@rpath"
         OUTPUT_NAME Ogg
     )
-endif()
+endif ()
 
 configure_pkg_config_file(ogg.pc.in)
 
 install(TARGETS ogg
-        EXPORT ogg
+        EXPORT ogg-targets
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -119,4 +119,5 @@ install(TARGETS ogg
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ogg.pc
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ogg
         )
-install(EXPORT ogg DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ogg)
+install(EXPORT ogg-targets
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ogg)
