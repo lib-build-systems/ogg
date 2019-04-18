@@ -120,4 +120,5 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ogg.pc
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ogg
         )
 install(EXPORT ogg-targets
+        NAMESPACE ogg::
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ogg)
